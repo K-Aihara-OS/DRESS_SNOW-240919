@@ -37,6 +37,15 @@ body {
                     gap: .8em;
                     width: 80%;
                     margin: auto;
+
+                    &.two_columns {
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        li {
+                            width: 45%;
+                        }
+                    }
     
                     li {
                         background-color: $lightGY;
@@ -60,6 +69,7 @@ body {
                     @include btn_style();
                     min-width: 8em;
                     color: #fff;
+                    font-weight: inherit;
                 }
             }
         }

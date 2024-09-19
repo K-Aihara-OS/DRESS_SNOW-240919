@@ -59,6 +59,14 @@ imgタグのsrcで画像ソースを指定することと同じ状態になる�
             'src': 'img/02_q1-01_question.png'
         },
         {
+            'name': 'q1_column',
+            'src': 'img/03_q1-02_q1Column.png'
+        },
+        {
+            'name': 'q2_question',
+            'src': 'img/03_q2-02_question.png'
+        },
+        {
             'name': '',
             'src': ''
         },
