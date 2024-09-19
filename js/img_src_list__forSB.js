@@ -47,6 +47,18 @@ imgタグのsrcで画像ソースを指定することと同じ状態になる�
         },
         ========================= */
         {
+            'name': 'hero',
+            'src': 'img/01_fv-01_hero.jpg'
+        },
+        {
+            'name': 'enqInfo',
+            'src': 'img/01_fv-02_enqInfo.png'
+        },
+        {
+            'name': 'q1_question',
+            'src': 'img/02_q1-01_question.png'
+        },
+        {
             'name': '',
             'src': ''
         },

@@ -21,7 +21,7 @@ $breakPoints: (
 
 // 共通余白の設定
 @mixin spacing($property) {
-    @if $property == padding or $property == margin {
+    @if type-of($property) == string and (str-index($property, 'padding') or str-index($property, 'margin')) {
         #{$property}: min(36px, 4vw);
 
         @include mq(sp) {#{$property}: 10px;}
@@ -30,11 +30,26 @@ $breakPoints: (
     }
 }
 
+$marginV: 20px;
+
 // 小文字（注釈、脚注）の設定
 @mixin annotation_size() {
     font-size: 11px;
     @include mq(sp) {font-size: 9px;}
 }
+
+// ボタン共通スタイル
+@mixin btn_style() {
+    border-radius: 8px;
+    padding: 1em .5em;
+    text-align: center;
+    box-shadow: 2px 4px 4px rgba(0,0,0,.3);
+}
+
+// 色設定
+$txtC-basic: #333;
+$lightGY: #dbdbdb;
+$midPL: #7a77c1;
 
 // iPhone safariの枠線を消す
 video {
