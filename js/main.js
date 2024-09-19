@@ -9,6 +9,9 @@
             // クリック対象がulであれば無視
             if (e.target === e.currentTarget) {return false;}
 
+            // 親ulのクラス
+            const parentClass = e.currentTarget.classList;
+
             // 子要素(span等)がクリック対象の場合は親liをターゲットに設定
             const target_li = (()=>{
                 if (e.target.tagName !== 'LI') {
@@ -17,8 +20,20 @@
                     return e.target;
                 }
             })();
+            
+            // 単一選択
+            if (parentClass.contains('js-single')) {
+                const current_lis = Array.from(e.currentTarget.children);
+
+                current_lis.forEach(current_li => {
+                    current_li.classList.remove('is-active');
+                });
+            }
+
             // スタイル変更
             change_options_style(target_li);
+
+
         });
     });
 
