@@ -1,0 +1,100 @@
+$breakPoints: (
+    "sp": "screen and (max-width: 414px) ",
+    "tb": "screen and (max-width: 767px) ",
+    "pc": "screen and (min-width: 768px) ",
+) !default;
+@mixin mq ($breakPoint) {
+    @media #{map-get($breakPoints, $breakPoint)} {
+        @content;
+    }
+}
+
+@mixin keyframes($anime) {
+    @keyframes #{$anime} {
+        @content;
+    }
+}
+
+@mixin animation($anime) {
+    animation: $anime;
+}
+
+// 共通余白の設定
+@mixin spacing($property) {
+    @if $property == padding or $property == margin {
+        #{$property}: min(36px, 4vw);
+
+        @include mq(sp) {#{$property}: 10px;}
+    } @else {
+        @error "The property #{$property} is not supported. Use 'padding' or 'margin'.";
+    }
+}
+
+// 小文字（注釈、脚注）の設定
+@mixin annotation_size() {
+    font-size: 11px;
+    @include mq(sp) {font-size: 9px;}
+}
+
+// iPhone safariの枠線を消す
+video {
+    filter: drop-shadow(0px 0px rgba(0,0,0,0));
+    // PCのChromeの枠線を消す
+    outline: none;
+    border: none;
+}
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+
+small {
+    @include annotation_size();
+
+    &.sup {vertical-align: super;}
+}
+.footnote {
+    @include annotation_size();
+    
+    &.right {text-align: right;}
+}
+
+ol.footnote {
+    list-style-type: none;
+    margin-top: 10px;
+    padding-left: 0;
+    display: table;
+    font-size: 0.6rem;
+    text-align: left;
+
+    &.right {margin-left: auto;}
+
+    li {
+        display: table-row;
+        counter-increment: table-ol;
+
+        &:before {
+            content: "*" counter(table-ol);
+            display: table-cell;
+            padding-right: 1em;
+            width: 1em;/*Firefox用*/
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            margin-bottom: 0.5em;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+html {
+    font-size: 22px;
+    @include mq(sp) {font-size: 20px;}
+}
+
+* {box-sizing: border-box;}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+
+    img, video {
+        display: block; /* 縦配置画像の隙間対策 */
+        width: 100%;
+        // vertical-align: middle; /* display:blockで都合が悪い場合はこちらで対応 */
+    }
+}
