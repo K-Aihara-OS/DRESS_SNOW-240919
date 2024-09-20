@@ -86,6 +86,10 @@ body {
   color: #333;
 }
 
+body, html {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -246,4 +250,22 @@ body {
 }
 .container section .imgBtn {
   margin: 40px 0;
+}
+.container footer {
+  font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #000;
+  text-align: center;
+  margin: 50px 0 30px;
+  padding-bottom: 30px;
+}
+.container footer .footer__info {
+  line-height: 2;
+}
+.container footer ul.footer__links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em 0;
+  margin: 2em 0;
 }/*# sourceMappingURL=style.css.map */
