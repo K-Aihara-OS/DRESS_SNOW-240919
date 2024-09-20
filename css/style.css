@@ -284,6 +284,13 @@ body, html {
 .container section .imgBtn {
   margin: 40px 0;
 }
+.container section .fadeIn {
+  opacity: 0;
+}
+.container section .fadeIn.is-visible {
+  opacity: 1;
+  transition: opacity 2s;
+}
 .container footer {
   font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
   font-size: 12px;

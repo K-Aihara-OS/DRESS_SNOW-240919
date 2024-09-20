@@ -14,6 +14,26 @@
         }
     });
 
+    // スクロールフェードイン
+    const targets = document.querySelectorAll('.fadeIn');
+    const fadeIn_effect = function(entries, observer) {
+        entries.forEach(entry => {
+            // 監視に入った時の処理
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            }
+        });
+    }
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0 // 0～1
+    }
+    const observer = new IntersectionObserver(fadeIn_effect, options);
+    targets.forEach(target => {
+        observer.observe(target);
+    });
+
     // 選択肢クリック時の処理
     const options_uls = document.querySelectorAll('ul.answer__options');
 

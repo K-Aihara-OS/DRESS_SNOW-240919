@@ -197,6 +197,15 @@ body, html {height: 100%;}
         .column {margin: $marginV * 2 0;}
 
         .imgBtn {margin: $marginV * 2 0;}
+
+        .fadeIn {
+            opacity: 0;
+
+            &.is-visible {
+                opacity: 1;
+                transition: opacity 2s;
+            }
+        }
     }
 
     footer {
