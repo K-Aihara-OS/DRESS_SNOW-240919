@@ -131,7 +131,7 @@ body, html {
   }
 }
 .container section.question .question__answer {
-  margin-top: 40px;
+  margin: 40px 0;
 }
 .container section.question .question__answer ul.answer__options {
   display: flex;
@@ -257,9 +257,11 @@ body, html {
   position: relative;
   z-index: 10;
 }
+.container section.column .btnNext {
+  margin-top: 20px;
+}
 .container section .btnNext {
   text-align: center;
-  margin-top: 40px;
 }
 .container section .btnNext button.btnNextGY {
   border-radius: 8px;

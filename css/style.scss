@@ -47,7 +47,7 @@ body, html {height: 100%;}
                 @include spacing(margin-bottom);
             }
             .question__answer {
-                margin-top: $marginV * 2;
+                margin: $marginV * 2 0;
 
                 ul.answer__options {
                     display: flex;
@@ -172,11 +172,12 @@ body, html {height: 100%;}
                     z-index: 10;
                 }
             }
+            .btnNext {margin-top: $marginV;}
         }
 
         .btnNext {
             text-align: center;
-            margin-top: $marginV * 2;
+            // margin-top: $marginV * 2;
 
             button.btnNextGY {
                 @include btn_style();
