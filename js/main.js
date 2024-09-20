@@ -135,7 +135,7 @@
         nextSect.classList.add('is-show');
 
         // 自動スクロール
-        const elementY = window.scrollY + nextSect.getBoundingClientRect().top - 20;
+        const elementY = window.scrollY + nextSect.getBoundingClientRect().top;
         scrollTo({top: elementY, left:0, behavior: 'smooth'});
 
         // 遅延表示の要素を表示
