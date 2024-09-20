@@ -140,6 +140,44 @@ body {
   color: #fff;
   box-shadow: none;
 }
+.container section.question .question__answer ul.answer__checkboxes {
+  display: grid;
+  grid-template-rows: 1fr;
+  row-gap: 1em;
+}
+.container section.question .question__answer ul.answer__checkboxes li {
+  position: relative;
+  display: grid;
+  grid-template-columns: min(10vw, 40px) 1fr;
+  grid-template-rows: 100%;
+  gap: 0 0.5em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container section.question .question__answer ul.answer__checkboxes li input[type=checkbox] {
+  position: relative;
+  appearance: none;
+  width: min(10vw, 40px);
+  height: min(10vw, 40px);
+  background-color: #fff;
+  border: 1px solid #ab2c4c;
+}
+.container section.question .question__answer ul.answer__checkboxes li input[type=checkbox]:checked::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  content: "";
+  border: 3px solid #ab2c4c;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.container section.question .question__answer ul.answer__checkboxes li label {
+  cursor: pointer;
+}
 .container section.question .question__btnNext {
   margin: 40px 0;
   text-align: center;
@@ -154,4 +192,55 @@ body {
   min-width: 8em;
   color: #fff;
   font-weight: inherit;
+}
+.container section.column {
+  margin: 80px 0 20px;
+}
+.container section.column .check {
+  position: relative;
+  padding: min(36px, 4vw);
+}
+@media screen and (max-width: 414px) {
+  .container section.column .check {
+    padding: 10px;
+  }
+}
+.container section.column .check img.check__title {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 40%;
+  transform-origin: left bottom;
+  transform: rotate(-15deg);
+  margin: min(36px, 4vw);
+  z-index: 20;
+}
+@media screen and (max-width: 414px) {
+  .container section.column .check img.check__title {
+    margin: 10px;
+  }
+}
+.container section.column .check .check__contents {
+  position: relative;
+  z-index: 10;
+}
+.container section .btnNext {
+  text-align: center;
+  margin-top: 40px;
+}
+.container section .btnNext button.btnNextGY {
+  border-radius: 8px;
+  padding: 1em 0.5em;
+  text-align: center;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  background-color: #dbdbdb;
+  padding: 0.5em 1em;
+  min-width: 12em;
+  line-height: 1.4;
+  font-weight: inherit;
+  color: inherit;
+}
+.container section .column {
+  margin: 40px 0;
 }/*# sourceMappingURL=style.css.map */

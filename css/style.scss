@@ -53,10 +53,55 @@ body {
                         @include btn_style();
 
                         &.is-active {
-                            background-color: #ec8db3;
+                            background-color: $midPK;
                             color: #fff;
                             box-shadow: none;
                         }
+                    }
+                }
+
+                ul.answer__checkboxes {
+                    display: grid;
+                    grid-template-rows: 1fr;
+                    row-gap: 1em;
+
+                    li {
+                        $cboSize: min(10vw, 40px);
+                        position: relative;
+                        display: grid;
+                        grid-template-columns: $cboSize 1fr;
+                        grid-template-rows: 100%;
+                        gap: 0 .5em;
+                        font-weight: 500;
+                        cursor: pointer;
+
+                        // チェックボックス
+                        input[type="checkbox"] {
+                            position: relative;
+                            appearance: none;
+                            width: $cboSize;
+                            height: $cboSize;
+                            background-color: #fff;
+                            border: 1px solid $darkPK;
+                            
+                            &:checked {
+                                &::after {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    display: block;
+                                    content: '';
+                                    border: 3px solid $darkPK;
+                                    width: 80%;
+                                    height: 80%;
+                                    border-radius: 50%;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+
+                        label {cursor: pointer;}
                     }
                 }
             }
@@ -73,5 +118,46 @@ body {
                 }
             }
         }
+
+        &.column {
+            margin: ($marginV * 4) 0 $marginV;
+
+            .check {
+                position: relative;
+                @include spacing(padding);
+
+                img.check__title {
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    width: 40%;
+                    transform-origin: left bottom;
+                    transform: rotate(-15deg);
+                    @include spacing(margin);
+                    z-index: 20;
+                }
+                .check__contents {
+                    position: relative;
+                    z-index: 10;
+                }
+            }
+        }
+
+        .btnNext {
+            text-align: center;
+            margin-top: $marginV * 2;
+
+            button.btnNextGY {
+                @include btn_style();
+                background-color: $lightGY;
+                padding: .5em 1em;
+                min-width: 12em;
+                line-height: 1.4;
+                font-weight: inherit;
+                color: inherit;
+            }
+        }
+
+        .column {margin: $marginV * 2 0;}
     }
 }

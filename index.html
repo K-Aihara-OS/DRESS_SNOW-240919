@@ -14,11 +14,13 @@
 </head>
 <body>
     <div class="container">
+        <!-- FV -->
         <section class="fv is-show">
             <img src="" alt="ヒーロー" data-img="hero">
             <img src="" alt="アンケートのご回答で" data-img="enqInfo">
         </section>
 
+        <!-- Q1 -->
         <section class="question q1 is-show">
             <div class="question__title">
                 <img src="" alt="設問文・Q1" data-img="q1_question">
@@ -34,10 +36,11 @@
             </div>
 
             <div class="question__btnNext">
-                <button class="btnNext">次へ</button>
+                <button class="btnNext js-showNext">次へ</button>
             </div>
         </section>
 
+        <!-- Q2 -->
         <section class="question q2">
             <img src="" alt="お悩みは、年々増えていきますよね" data-img="q1_column">
 
@@ -51,6 +54,95 @@
                     <li>いいえ</li>
                 </ul>
             </div>
+        </section>
+
+        <!-- Check 1 -->
+        <section class="column">
+            <div class="check">
+                <img src="" alt="check1" class="check__title" data-img="check1_title">
+                <div class="check__contents">
+                    <video src="" data-img="check1_vid" playsinline autoplay muted loop width="auto" height="auto"></video>
+                </div>
+            </div>
+            
+            <div class="btnNext">
+                <button class="btnNextGY js-showNext">角層の鈍化<br>による影響は？</button>
+            </div>
+        </section>
+
+        <!-- Check 2 -->
+        <section class="column">
+            <div class="check">
+                <img src="" alt="check2" class="check__title" data-img="check2_title">
+                <div class="check__contents">
+                    <img src="" alt="" data-img="check2_contents">
+                </div>
+            </div>
+
+            <img src="" alt="ドレススノーは2つの原因を徹底ケアします" data-img="check2_img">
+            
+            <div class="btnNext">
+                <button class="btnNextGY js-showNext">どうやって対策するの？</button>
+            </div>
+        </section>
+
+        <!-- Q3 -->
+        <section class="question q3">
+            <div class="column">
+                <img src="" alt="対策1・彷徨いメラニン" data-img="q3_column1_title">
+                <video src="img/06_q3-02_strategy_vid-1.mp4" data-img="q3_column1_contents" playsinline autoplay muted loop width="auto" height="auto"></video>
+            </div>
+
+            <div class="column">
+                <img src="" alt="対策2・角層の鈍化" data-img="q3_column2_title">
+                <video src="" data-img="q3_column2_contents" playsinline autoplay muted loop width="auto" height="auto"></video>
+            </div>
+
+            <div class="question__title">
+                <img src="" alt="設問文・Q3" data-img="q3_question">
+            </div>
+
+            <div class="question__answer">
+                <ul class="answer__checkboxes">
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_1">
+                        <label for="q3_1">美白ケア<small class="sup">※3</small>とシワ改善を同時に体験できること</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_2">
+                        <label for="q3_2">厚くなった角層をほぐし、肌そのものを浸透<small class="sup">※5</small>しやすい状態に整えること</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_3">
+                        <label for="q3_3">発酵によって一般のコラーゲンよりも吸収されやすくなった独自原料が、角層すみずみまで浸透<small class="sup">※5</small>し、ハリを与えること</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_4">
+                        <label for="q3_4">透明感<small class="sup">※7</small>のある、明るい肌へ導くこと</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_5">
+                        <label for="q3_5">美容液のような、とろみのある濃密テクスチャーであること</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_6">
+                        <label for="q3_6">高品質で手応えのある商品が、惜しみなく使い続けられる価格であること</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_7">
+                        <label for="q3_7">有効成分ナイアシンアミドが配合された医薬部外品であること</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="q3_options" id="q3_8">
+                        <label for="q3_8">美白<small class="sup">※3</small>が効きにくい大人肌のための設計であること</label>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="btnNext">
+                <button class="btnNextGY js-showNext">特別セットの<br>詳細を見る</button>
+            </div>
+            
         </section>
 
     </div>

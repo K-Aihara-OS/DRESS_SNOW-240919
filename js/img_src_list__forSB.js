@@ -67,8 +67,44 @@ imgタグのsrcで画像ソースを指定することと同じ状態になる�
             'src': 'img/03_q2-02_question.png'
         },
         {
-            'name': '',
-            'src': ''
+            'name': 'check1_title',
+            'src': 'img/04_check1-02_check.png'
+        },
+        {
+            'name': 'check1_vid',
+            'src': 'img/04_check1-01_vid.mp4'
+        },
+        {
+            'name': 'check2_title',
+            'src': 'img/05_check2-02_check.png'
+        },
+        {
+            'name': 'check2_contents',
+            'src': 'img/05_check2-01_column.jpg'
+        },
+        {
+            'name': 'check2_img',
+            'src': 'img/05_check2-03_illustration.png'
+        },
+        {
+            'name': 'q3_column1_title',
+            'src': 'img/06_q3-01_strategy_title-1.png'
+        },
+        {
+            'name': 'q3_column1_contents',
+            'src': 'img/06_q3-02_strategy_vid-1.mp4'
+        },
+        {
+            'name': 'q3_column2_title',
+            'src': 'img/06_q3-03_strategy_title-2.png'
+        },
+        {
+            'name': 'q3_column2_contents',
+            'src': 'img/06_q3-04_strategy_vid-2.mp4'
+        },
+        {
+            'name': 'q3_question',
+            'src': 'img/06_q3-05_question.png'
         },
         {
             'name': '',
