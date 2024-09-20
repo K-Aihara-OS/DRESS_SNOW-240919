@@ -137,6 +137,17 @@
         // 自動スクロール
         const elementY = window.scrollY + nextSect.getBoundingClientRect().top - 20;
         scrollTo({top: elementY, left:0, behavior: 'smooth'});
+
+        // 遅延表示の要素を表示
+        const delay_els = nextSect.querySelectorAll('.visible_delay');
+
+        if (delay_els.length > 0) {
+            delay_els.forEach(delay_el => {
+                setTimeout(() => {
+                    delay_el.classList.add('is-visible');
+                }, 500);
+            });
+        }
     }
 
 })();

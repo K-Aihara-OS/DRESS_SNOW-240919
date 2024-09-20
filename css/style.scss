@@ -206,6 +206,15 @@ body, html {height: 100%;}
                 transition: opacity 2s;
             }
         }
+
+        .visible_delay {
+            opacity: 0;
+
+            &.is-visible {
+                opacity: 1;
+                transition: opacity 2s;
+            }
+        }
     }
 
     footer {

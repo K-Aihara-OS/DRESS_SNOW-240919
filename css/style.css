@@ -291,6 +291,13 @@ body, html {
   opacity: 1;
   transition: opacity 2s;
 }
+.container section .visible_delay {
+  opacity: 0;
+}
+.container section .visible_delay.is-visible {
+  opacity: 1;
+  transition: opacity 2s;
+}
 .container footer {
   font-family: YuGothic, "Yu Gothic", "ヒラギノ角ゴシック", "Hiragino Sans", sans-serif;
   font-size: 12px;
