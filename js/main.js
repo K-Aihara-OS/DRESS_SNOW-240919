@@ -1,6 +1,19 @@
 (function() {
     'use strict';
 
+    /* 自動生成要素 */
+    // 警告文
+    const answer_options = document.querySelectorAll('.question__answer > ul');
+    answer_options.forEach(option => {
+        // .js-showNextクラスが含まれる場合は、無視
+        if (!option.classList.contains('js-showNext')) {
+            let attention = document.createElement('p');
+            attention.setAttribute('class', 'js-attention');
+            attention.textContent = ATTENTION_TXT;
+            option.parentElement.appendChild(attention);
+        }
+    });
+
     // 選択肢クリック時の処理
     const options_uls = document.querySelectorAll('ul.answer__options');
 
@@ -45,21 +58,65 @@
     
     nextBtns.forEach(nextBtn => {
         nextBtn.addEventListener('click', (e)=> {
-            // スタイル変更（buttonのみ。liは無視）
-            if (e.target.tagName === 'BUTTON') {
-                e.target.classList.add('is-active');
-            }
-
             const thisSect = e.target.closest('section');
             const nextSect = thisSect.nextElementSibling;
-            
-            // クリックされたボタンの次のsectionを表示
-            nextSect.classList.add('is-show');
 
-            // 自動スクロール
-            const elementY = window.scrollY + nextSect.getBoundingClientRect().top - 20;
-            scrollTo({top: elementY, left:0, behavior: 'smooth'});
+            // buttonタグのみの場合の処理
+            if (e.target.tagName === 'BUTTON') {
+                // スタイル変更（buttonのみ。liは無視）
+                e.target.classList.add('is-active');
+                
+                /* 同section内の選択肢の必須選択警告 */
+                const thisAnswer = thisSect.querySelector('.question__answer');
+                // .question__answerが存在する場合のみ、警告文の処理
+                if (thisAnswer) {
+                    const thisAttn = thisAnswer.querySelector('.js-attention');
+                    
+                    const thisOption = thisAnswer.querySelector('.question__answer > ul');
+                    const thisOption_li = Array.from(thisOption.children);
+                    let selected_len = 0;
+                    
+                    // 選択されている数を数える
+                    thisOption_li.forEach(thisOpt => {
+                        // ボタン形式かチェックボックス形式で分岐
+                        if (thisOpt.parentElement.classList.contains('answer__checkboxes')) {
+                            let thisCbo = thisOpt.querySelector('input[type="checkbox"]');
+                            if (thisCbo.checked) {
+                                selected_len++
+                            }
+                        } else {
+                            if (thisOpt.classList.contains('is-active')) {
+                                selected_len++;
+                            }
+                        }
+
+                    });
+    
+                    // 選択が0だったら警告文を表示
+                    if (selected_len < 1) {
+                        thisAttn.classList.add('is-show');
+                    } else {
+                        thisAttn.classList.remove('is-show');
+                        go_next(nextSect);
+                    }
+
+                } else {
+                    go_next(nextSect);
+                }
+            } else {
+                go_next(nextSect);
+            }
+            
         });
     });
+
+    function go_next(nextSect) {
+        // クリックされたボタンの次のsectionを表示
+        nextSect.classList.add('is-show');
+
+        // 自動スクロール
+        const elementY = window.scrollY + nextSect.getBoundingClientRect().top - 20;
+        scrollTo({top: elementY, left:0, behavior: 'smooth'});
+    }
 
 })();

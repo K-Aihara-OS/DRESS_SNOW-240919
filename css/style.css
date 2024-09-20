@@ -198,6 +198,14 @@ body, html {
 .container section.question .question__answer ul.answer__checkboxes li label {
   cursor: pointer;
 }
+.container section.question .question__answer .js-attention {
+  display: none;
+  text-align: center;
+  color: red;
+}
+.container section.question .question__answer .js-attention.is-show {
+  display: block;
+}
 .container section.question .question__btnNext {
   margin: 40px 0;
   text-align: center;

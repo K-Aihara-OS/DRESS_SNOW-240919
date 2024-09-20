@@ -121,6 +121,14 @@ body, html {height: 100%;}
                         label {cursor: pointer;}
                     }
                 }
+
+                .js-attention {
+                    display: none;
+                    text-align: center;
+                    color: red;
+
+                    &.is-show {display: block;}
+                }
             }
             .question__btnNext {
                 margin: $marginV * 2 0;
