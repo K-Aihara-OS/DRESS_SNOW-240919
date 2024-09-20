@@ -18,21 +18,37 @@ body, html {height: 100%;}
 .container {
     max-width: 750px;
     margin: 0 auto;
-    @include spacing(padding);
     background: linear-gradient(to right, #DDEAF1 0%, #F6FBFF 30%, #F6FBFF 50%, #F6FBFF 70%, #CFC9EB 100%);
-
+    
     img, video {
         display: block; /* 縦配置画像の隙間対策 */
         width: 100%;
         // vertical-align: middle; /* display:blockで都合が悪い場合はこちらで対応 */
     }
-
+    
     section {
+        display: none;
+        margin-bottom: $marginV * 2;
+        @include spacing(padding);
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &.is-show {
+            display: block;
+        }
+
+        &.fv {
+            margin-bottom: 0;
+            padding: 0;
+        }
+        
         &.question {
             .question__title {
                 @include spacing(margin-bottom);
             }
             .question__answer {
+                margin-top: $marginV * 2;
+
                 ul.answer__options {
                     display: flex;
                     flex-direction: column;

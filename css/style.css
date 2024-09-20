@@ -97,17 +97,30 @@ body, html {
 .container {
   max-width: 750px;
   margin: 0 auto;
-  padding: min(36px, 4vw);
   background: linear-gradient(to right, #DDEAF1 0%, #F6FBFF 30%, #F6FBFF 50%, #F6FBFF 70%, #CFC9EB 100%);
-}
-@media screen and (max-width: 414px) {
-  .container {
-    padding: 10px;
-  }
 }
 .container img, .container video {
   display: block; /* 縦配置画像の隙間対策 */
   width: 100%;
+}
+.container section {
+  display: none;
+  margin-bottom: 40px;
+  padding: min(36px, 4vw);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media screen and (max-width: 414px) {
+  .container section {
+    padding: 10px;
+  }
+}
+.container section.is-show {
+  display: block;
+}
+.container section.fv {
+  margin-bottom: 0;
+  padding: 0;
 }
 .container section.question .question__title {
   margin-bottom: min(36px, 4vw);
@@ -116,6 +129,9 @@ body, html {
   .container section.question .question__title {
     margin-bottom: 10px;
   }
+}
+.container section.question .question__answer {
+  margin-top: 40px;
 }
 .container section.question .question__answer ul.answer__options {
   display: flex;

@@ -33,11 +33,24 @@
             // スタイル変更
             change_options_style(target_li);
 
-
         });
     });
 
     function change_options_style(target_li) {
         target_li.classList.toggle('is-active');
     }
+
+    // 次へ進むボタンクリック時の処理
+    const nextBtns = document.querySelectorAll('.js-showNext');
+    
+    nextBtns.forEach(nextBtn => {
+        nextBtn.addEventListener('click', (e)=> {
+            const thisSect = e.target.closest('section');
+            const nextSect = thisSect.nextElementSibling;
+            
+            // クリックされたボタンの次のsectionを表示
+            nextSect.classList.add('is-show');
+        });
+    });
+
 })();
