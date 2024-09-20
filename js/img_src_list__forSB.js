@@ -107,16 +107,24 @@ imgタグのsrcで画像ソースを指定することと同じ状態になる�
             'src': 'img/06_q3-05_question.png'
         },
         {
-            'name': '',
-            'src': ''
+            'name': 'q4_question_1',
+            'src': 'img/07_q4-01_question_upper.png'
         },
         {
-            'name': '',
-            'src': ''
+            'name': 'q4_question_2',
+            'src': 'img/07_q4-02_question_lower.jpg'
         },
         {
-            'name': '',
-            'src': ''
+            'name': 'cta_thanks',
+            'src': 'img/08_cta-01_thanks.png'
+        },
+        {
+            'name': 'cta_offer',
+            'src': 'img/08_cta-02_offer.jpg'
+        },
+        {
+            'name': 'btn_cv',
+            'src': 'https://file.mysquadbeyond.com/uploads/article_photo/photo/4190509/452a5ef5-8962-4394-9ac2-c70e28da73fe.png'
         },
     ];
 /* ===========================================
