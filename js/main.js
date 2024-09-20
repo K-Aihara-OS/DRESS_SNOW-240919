@@ -45,11 +45,20 @@
     
     nextBtns.forEach(nextBtn => {
         nextBtn.addEventListener('click', (e)=> {
+            // スタイル変更（buttonのみ。liは無視）
+            if (e.target.tagName === 'BUTTON') {
+                e.target.classList.add('is-active');
+            }
+
             const thisSect = e.target.closest('section');
             const nextSect = thisSect.nextElementSibling;
             
             // クリックされたボタンの次のsectionを表示
             nextSect.classList.add('is-show');
+
+            // 自動スクロール
+            const elementY = window.scrollY + nextSect.getBoundingClientRect().top - 20;
+            scrollTo({top: elementY, left:0, behavior: 'smooth'});
         });
     });
 

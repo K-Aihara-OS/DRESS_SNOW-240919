@@ -213,6 +213,10 @@ body, html {
   color: #fff;
   font-weight: inherit;
 }
+.container section.question .question__btnNext button.btnNext.is-active {
+  filter: brightness(0.8);
+  box-shadow: none;
+}
 .container section.column {
   margin: 80px 0 20px;
 }
@@ -260,6 +264,11 @@ body, html {
   line-height: 1.4;
   font-weight: inherit;
   color: inherit;
+}
+.container section .btnNext button.btnNextGY.is-active {
+  background-color: #7a77c1;
+  color: #fff;
+  box-shadow: none;
 }
 .container section .column {
   margin: 40px 0;

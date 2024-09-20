@@ -67,7 +67,6 @@ body, html {height: 100%;}
     
                     li {
                         background-color: $lightGY;
-
                         @include btn_style();
 
                         &.is-active {
@@ -133,6 +132,11 @@ body, html {height: 100%;}
                     min-width: 8em;
                     color: #fff;
                     font-weight: inherit;
+
+                    &.is-active {
+                        filter: brightness(0.8);
+                        box-shadow: none;
+                    }
                 }
             }
         }
@@ -173,6 +177,12 @@ body, html {height: 100%;}
                 line-height: 1.4;
                 font-weight: inherit;
                 color: inherit;
+
+                &.is-active {
+                    background-color: $midPL;
+                    color: #fff;
+                    box-shadow: none;
+                }
             }
         }
 
