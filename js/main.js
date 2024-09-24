@@ -14,7 +14,18 @@
         }
     });
 
-    // スクロールフェードイン
+    // スクロールフェードイン（初回スクロール）
+    const fadeIn_target = document.querySelector('.fadeIn_noIntersection');
+    let hasScroll = false;
+
+    window.addEventListener('scroll', ()=> {
+        if (!hasScroll) {
+            fadeIn_target.classList.add('is-visible');
+            hasScroll = true;
+        }
+    });
+
+    // スクロールフェードイン（交差監視）
     const targets = document.querySelectorAll('.fadeIn');
     const fadeIn_effect = function(entries, observer) {
         entries.forEach(entry => {

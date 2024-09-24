@@ -42,6 +42,15 @@ body, html {height: 100%;}
             margin-bottom: 0;
             padding: 0;
         }
+
+        &.fadeIn_noIntersection {
+            opacity: 0;
+
+            &.is-visible {
+                opacity: 1;
+                transition: opacity 2s;
+            }
+        }
         
         &.question {
             .question__title {
@@ -188,7 +197,7 @@ body, html {height: 100%;}
             button.btnNextGY {
                 @include btn_style();
                 background-color: $lightGY;
-                padding: .5em 1em;
+                padding: 1em;
                 min-width: 12em;
                 line-height: 1.4;
                 font-weight: inherit;

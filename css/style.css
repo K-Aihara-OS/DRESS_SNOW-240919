@@ -127,6 +127,13 @@ body, html {
   margin-bottom: 0;
   padding: 0;
 }
+.container section.fadeIn_noIntersection {
+  opacity: 0;
+}
+.container section.fadeIn_noIntersection.is-visible {
+  opacity: 1;
+  transition: opacity 2s;
+}
 .container section.question .question__title {
   margin-bottom: min(36px, 4vw);
 }
@@ -284,7 +291,7 @@ body, html {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   background-color: #dbdbdb;
-  padding: 0.5em 1em;
+  padding: 1em;
   min-width: 12em;
   line-height: 1.4;
   font-weight: inherit;
