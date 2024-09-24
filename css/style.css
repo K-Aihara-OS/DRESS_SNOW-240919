@@ -105,10 +105,15 @@ body, html {
 }
 .container section {
   display: none;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   padding: min(36px, 4vw);
   padding-top: 0;
   padding-bottom: 0;
+}
+@media screen and (max-width: 414px) {
+  .container section {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (max-width: 414px) {
   .container section {
@@ -229,16 +234,24 @@ body, html {
   margin: 80px 0 20px;
   padding-top: 20px;
 }
-.container section.column .check {
+@media screen and (max-width: 414px) {
+  .container section.column {
+    margin-top: 0;
+  }
+}
+.container section.column .column__contents {
+  margin-bottom: 40px;
+}
+.container section.column .column__contents .check {
   position: relative;
   padding: min(36px, 4vw);
 }
 @media screen and (max-width: 414px) {
-  .container section.column .check {
+  .container section.column .column__contents .check {
     padding: 10px;
   }
 }
-.container section.column .check img.check__title {
+.container section.column .column__contents .check img.check__title {
   position: absolute;
   top: -10px;
   left: 0;
@@ -249,11 +262,11 @@ body, html {
   z-index: 20;
 }
 @media screen and (max-width: 414px) {
-  .container section.column .check img.check__title {
+  .container section.column .column__contents .check img.check__title {
     margin: 10px;
   }
 }
-.container section.column .check .check__contents {
+.container section.column .column__contents .check .check__contents {
   position: relative;
   z-index: 10;
 }
@@ -262,6 +275,7 @@ body, html {
 }
 .container section .btnNext {
   text-align: center;
+  margin-top: 40px;
 }
 .container section .btnNext button.btnNextGY {
   border-radius: 8px;
@@ -307,8 +321,13 @@ body, html {
   font-weight: 500;
   color: #000;
   text-align: center;
-  margin: 50px 0 30px;
+  margin: 80px 0 30px;
   padding-bottom: 30px;
+}
+@media screen and (max-width: 414px) {
+  .container footer {
+    margin-top: 50px;
+  }
 }
 .container footer .footer__info {
   line-height: 2;

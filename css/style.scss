@@ -28,7 +28,8 @@ body, html {height: 100%;}
     
     section {
         display: none;
-        margin-bottom: $marginV * 2;
+        margin-bottom: $marginV * 4;
+        @include mq(sp) {margin-bottom: $marginV;}
         @include spacing(padding);
         padding-top: 0;
         padding-bottom: 0;
@@ -151,25 +152,30 @@ body, html {height: 100%;}
 
         &.column {
             margin: ($marginV * 4) 0 $marginV;
+            @include mq(sp) {margin-top: 0;}
             padding-top: 20px; // 自動スクロール時のトップ位置調整
 
-            .check {
-                position: relative;
-                @include spacing(padding);
+            .column__contents {
+                margin-bottom: $marginV * 2;
 
-                img.check__title {
-                    position: absolute;
-                    top: -10px;
-                    left: 0;
-                    width: 40%;
-                    transform-origin: left bottom;
-                    transform: rotate(-15deg);
-                    @include spacing(margin);
-                    z-index: 20;
-                }
-                .check__contents {
+                .check {
                     position: relative;
-                    z-index: 10;
+                    @include spacing(padding);
+    
+                    img.check__title {
+                        position: absolute;
+                        top: -10px;
+                        left: 0;
+                        width: 40%;
+                        transform-origin: left bottom;
+                        transform: rotate(-15deg);
+                        @include spacing(margin);
+                        z-index: 20;
+                    }
+                    .check__contents {
+                        position: relative;
+                        z-index: 10;
+                    }
                 }
             }
             .btnNext {margin-top: $marginV;}
@@ -177,7 +183,7 @@ body, html {height: 100%;}
 
         .btnNext {
             text-align: center;
-            // margin-top: $marginV * 2;
+            margin-top: $marginV * 2;
 
             button.btnNextGY {
                 @include btn_style();
@@ -225,8 +231,9 @@ body, html {height: 100%;}
         font-weight: 500;
         color: #000;
         text-align: center;
-        margin: 50px 0 30px;
+        margin: 80px 0 30px;
         padding-bottom: 30px;
+        @include mq(sp) {margin-top: 50px;}
 
         .footer__info {line-height: 2;}
 
