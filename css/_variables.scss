@@ -93,7 +93,8 @@ ol.footnote {
     margin-top: 10px;
     padding-left: 0;
     display: table;
-    font-size: 0.6rem;
+    @include annotation_size();
+    font-weight: 500;
     text-align: left;
 
     &.right {margin-left: auto;}
