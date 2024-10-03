@@ -60,7 +60,7 @@ imgタグのsrcで画像ソースを指定することと同じ状態になる�
         },
         {
             'name': 'q1_column',
-            'src': 'https://file.mysquadbeyond.com/uploads/article_photo/photo/4476204/f72a92c6-46d7-461c-8f30-4efb03756ad8.png'
+            'src': 'https://file.mysquadbeyond.com/uploads/article_photo/photo/4494182/8087e9d9-4a30-4b19-86e1-dc3c714bc7ad.png'
         },
         {
             'name': 'q2_question',
@@ -84,7 +84,7 @@ imgタグのsrcで画像ソースを指定することと同じ状態になる�
         },
         {
             'name': 'check2_img',
-            'src': 'https://file.mysquadbeyond.com/uploads/article_photo/photo/4476211/19edc72e-93a1-4987-a460-bf7a5c1413f5.png'
+            'src': 'https://file.mysquadbeyond.com/uploads/article_photo/photo/4494183/89f50516-3fee-4dac-b014-200aeebd8716.png'
         },
         {
             'name': 'q3_column1_title',
